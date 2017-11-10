@@ -13,7 +13,7 @@ int main(void)
     value1 = 87;
     value2 = 15;
     diff = value1 - value2;
-    printf("%i minus %i equals %i.", value1, value2, diff);
+    printf("%i minus %i equals %i\n", value1, value2, diff);
 
     return 0;
 }
