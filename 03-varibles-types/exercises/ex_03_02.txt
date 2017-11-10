@@ -1,0 +1,18 @@
+Exercise 3.2
+Doan Thieu - 10/2017
+================================
+
+
+Check validity of variable names:
+
+Int                 :  valid
+Calloc              :  valid
+ReInitialize        :  valid
+char                :  invalid, can't name variable reserved keyword
+Xx                  :  valid
+_1312               :  valid
+_                   :  valid
+6_05                :  invalid, variable can't start with digit
+alpha_beta_routine  :  valid
+z                   :  valid
+A$                  :  invalid, $ is not of (_, 0-9, a-z, A-Z)
