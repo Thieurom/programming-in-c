@@ -1,0 +1,34 @@
+Exercise 3.3
+Doan Thieu - 10/2017
+================================
+
+
+Check validity of constants:
+
+123.456             :  valid
+0001                :  valid
+0Xab05              :  valid
+123.5e2             :  valid
+98.6F               :  valid 
+0996                :  invalid, '9' is not a valid octal digit
+123uL               :  valid
+1.234L              :  valid
+0XABCDEFL           :  valid
+0x10.5              :  invalid, hexadecimal floating constant require an exponent
+0xFFFF              :  valid
+0L                  :  valid
+.0001               :  valid
+98.7U               :  invalid, unsigned qualifier doesn't apply for floating constant
+-12E-12             :  valid
+1.2Fe-7             :  invalid, 'F' is not a valid decimal digit
+197u                :  valid
+0xabcu              :  valid
+0X0G1               :  invalid, 'G' is not a valid hexadecimal digit
+123L                :  valid
+-597.25             :  valid
++12                 :  valid
+17777s              :  invalid, 's' is not a valid decimal digit
+07777               :  valid
+15,000              :  invalid, can't use comma
+100U                :  valid
++123                :  valid
