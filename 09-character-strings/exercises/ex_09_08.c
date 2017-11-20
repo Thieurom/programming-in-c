@@ -9,27 +9,33 @@
 
 int main() {
     char str[81] = { "C is 1 of the most powerful programming languages." };
+    void replace_string(char source[], const char s1[], const char s2[]);
+
+    printf("Before replacement:\n");
+    printf("\"%s\"\n", str);
+
+    replace_string(str, "1", "one");
+
+    printf("\nAfter replacement:\n");
+    printf("\"%s\"\n", str);
+
+    return 0;
+}
+
+void replace_string(char source[], const char s1[], const char s2[]) {
     int index, length;
     int string_length(const char str[]);
     int find_string(const char source[], const char search[]);
     void remove_string(char source[], const int start, const int length);
     void insert_string(char source[], const char insert[], int location);
 
-    printf("Before replacement:\n");
-    printf("\"%s\"\n", str);
-
-    index = find_string(str, "1");
-    length = string_length("1");
+    index = find_string(source, s1);
+    length = string_length(s1);
 
     if (index != -1) {
-        remove_string(str, index, length);
-        insert_string(str, "one", index);
+        remove_string(source, index, length);
+        insert_string(source, s2, index);
     }
-
-    printf("\nAfter replacement:\n");
-    printf("\"%s\"\n", str);
-
-    return 0;
 }
 
 int string_length(const char str[]) {
