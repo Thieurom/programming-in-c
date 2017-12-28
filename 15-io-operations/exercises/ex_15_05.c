@@ -38,5 +38,7 @@ int main()
         printf("%.*s\n", n - m, b + m);
     } 
 
+    fclose(file);
+
     return EXIT_SUCCESS;
 }
